@@ -41,10 +41,10 @@
           <section>
               <h2>Observaciones</h2>
               <div>
-                  <a href="https://ctrlequi.github.io/voz-territorio/#/map">Observatorio</a>
+                  <a href="" onclick="redirectTo(event, 'https://ctrlequi.github.io/voz-territorio/#/map')">Observatorio</a>
               </div>
               <div>
-                  <a href="https://ctrlequi.github.io/voz-territorio/#/add-observation">Registra nueva observación</a>
+                  <a href="" onclick="redirectTo(event, 'https://ctrlequi.github.io/voz-territorio/#/add-observation')">Registra nueva observación</a>
               </div>
           </section>
       </section>
@@ -58,6 +58,13 @@
     // More info about config & dependencies:
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
+    function redirectTo (e, link) {
+      e.preventDefault()
+      console.log(link)
+      window.top.location.href = link
+      return false
+    }
+
     Reveal.initialize({
       transition: 'zoom',
       dependencies: [{
